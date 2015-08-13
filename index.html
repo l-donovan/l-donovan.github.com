@@ -8,8 +8,9 @@
       <script src='/js/dropdown.js'></script>
    </head>
    <body>
+	  <script src='/js/richtext.js'></script>
       <header>
-         <h1 id="docname">Document</h1>
+         <h1 id="docname" onclick="promptDocName()">Document</h1>
          <div id='cssmenu'>
             <ul>
                <li class='active has-sub'>
@@ -75,6 +76,5 @@
          </div>
       </header>
       <section contenteditable="true" id="document-text"></section>
-      <script src='/js/richtext.js'></script>
    </body>
 </html>

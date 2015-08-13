@@ -39,3 +39,9 @@ if (typeof QueryString.doc_loc !== 'undefined') {
     	}
 	});
 }
+
+function promptDocName() {
+	var name = prompt("Document Name:");
+	if (name !== null)
+		$("#docname").text(name);
+}
