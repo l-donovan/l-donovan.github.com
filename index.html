@@ -6,9 +6,9 @@
       <link rel="stylesheet" href="/css/style.css">
       <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
       <script src='/js/dropdown.js'></script>
+		<script src='/js/richtext.js'></script>
    </head>
    <body>
-	  <script src='/js/richtext.js'></script>
       <header>
          <h1 id="docname" onclick="promptDocName()">Document</h1>
          <div id='cssmenu'>
@@ -16,20 +16,22 @@
                <li class='active has-sub'>
                   <a href='#'>File</a>
                   <ul>
+							<li>
+								<a href='#'>Share</a>
+							</li>
                      <li class='has-sub'>
-                        <a href='#'>Product 1</a>
+                        <a href='#'>New</a>
                         <ul>
                            <li><a href='#'>Sub Product</a></li>
                            <li><a href='#'>Sub Product</a></li>
                         </ul>
                      </li>
-                     <li class='has-sub'>
-                        <a href='#'>Product 2</a>
-                        <ul>
-                           <li><a href='#'>Sub Product</a></li>
-                           <li><a href='#'>Sub Product</a></li>
-                        </ul>
-                     </li>
+                     <li>
+								<a href='#'>Open</a>
+							</li>
+							<li>
+								<a href='#'>Rename</a>
+							</li>
                   </ul>
                </li>
                <li class='has-sub'>
@@ -76,5 +78,6 @@
          </div>
       </header>
       <section contenteditable="true" id="document-text"></section>
+		<script src='/js/richtext.js'></script>
    </body>
 </html>
