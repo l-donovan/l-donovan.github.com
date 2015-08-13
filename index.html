@@ -1,69 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Rich Text Editor</title>
-    <link rel="stylesheet" href="/css/dropdown.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
-    <script src='/js/dropdown.js'></script>
-  </head>
-  <body>
-    <header>
-      <h1 id="docname">Document</h1>
-      <div id='cssmenu'>
-      <ul>
-         <li class='active has-sub'><a href='#'>File</a>
-           <ul>
-               <li class='has-sub'><a href='#'>Product 1</a>
+   <head>
+      <title>Rich Text Editor</title>
+      <link rel="stylesheet" href="/css/dropdown.css">
+      <link rel="stylesheet" href="/css/style.css">
+      <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+      <script src='/js/dropdown.js'></script>
+   </head>
+   <body>
+      <header>
+         <h1 id="docname">Document</h1>
+         <div id='cssmenu'>
+            <ul>
+               <li class='active has-sub'>
+                  <a href='#'>File</a>
                   <ul>
-                     <li><a href='#'>Sub Product</a></li>
-                     <li><a href='#'>Sub Product</a></li>
+                     <li class='has-sub'>
+                        <a href='#'>Product 1</a>
+                        <ul>
+                           <li><a href='#'>Sub Product</a></li>
+                           <li><a href='#'>Sub Product</a></li>
+                        </ul>
+                     </li>
+                     <li class='has-sub'>
+                        <a href='#'>Product 2</a>
+                        <ul>
+                           <li><a href='#'>Sub Product</a></li>
+                           <li><a href='#'>Sub Product</a></li>
+                        </ul>
+                     </li>
                   </ul>
                </li>
-               <li class='has-sub'><a href='#'>Product 2</a>
+               <li class='has-sub'>
+                  <a href='#'>Edit</a>
                   <ul>
-                     <li><a href='#'>Sub Product</a></li>
-                     <li><a href='#'>Sub Product</a></li>
                   </ul>
                </li>
-            </ul> 
-         </li>
-         <li class='has-sub'><a href='#'>Edit</a>
-           <ul>
-           </ul>
-         </li>
-         <li class='has-sub'><a href='#'>View</a>
-           <ul>
-           </ul>
-         </li>
-         <li class='has-sub'><a href='#'>Insert</a>
-           <ul>
-           </ul>
-         </li>
-         <li class='has-sub'><a href='#'>Format</a>
-           <ul>
-           </ul>
-         </li>
-         <li class='has-sub'><a href='#'>Tools</a>
-           <ul>
-           </ul>
-         </li>
-         <li class='has-sub'><a href='#'>Table</a>
-           <ul>
-           </ul>
-         </li>
-         <li class='has-sub'><a href='#'>Add-ons</a>
-           <ul>
-           </ul>
-         </li>
-         <li class='has-sub'><a href='#'>Help</a>
-           <ul>
-           </ul>
-         </li>
-      </ul>
-      </div>
-    </header>
-    <section contenteditable="true" id="document-text"></section>
-    <script src='/js/richtext.js'></script>
-  </body>
+               <li class='has-sub'>
+                  <a href='#'>View</a>
+                  <ul>
+                  </ul>
+               </li>
+               <li class='has-sub'>
+                  <a href='#'>Insert</a>
+                  <ul>
+                  </ul>
+               </li>
+               <li class='has-sub'>
+                  <a href='#'>Format</a>
+                  <ul>
+                  </ul>
+               </li>
+               <li class='has-sub'>
+                  <a href='#'>Tools</a>
+                  <ul>
+                  </ul>
+               </li>
+               <li class='has-sub'>
+                  <a href='#'>Table</a>
+                  <ul>
+                  </ul>
+               </li>
+               <li class='has-sub'>
+                  <a href='#'>Add-ons</a>
+                  <ul>
+                  </ul>
+               </li>
+               <li class='has-sub'>
+                  <a href='#'>Help</a>
+                  <ul>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </header>
+      <section contenteditable="true" id="document-text"></section>
+      <script src='/js/richtext.js'></script>
+   </body>
 </html>
