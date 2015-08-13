@@ -16,5 +16,26 @@ var QueryString = function () {
     return query_string;
 }();
 
-if (typeof QueryString['doc_name'] != null)
-  $("#docname").text(QueryString['doc_name']);
+if (typeof QueryString.doc_loc !== 'undefined') {
+	if (typeof QueryString.doc_name !== 'undefined')
+		$("#docname").text(QueryString.doc_name);
+	else
+		$("#docname").text(QueryString.doc_loc);
+	$.ajax({
+    	type: 'GET',
+    	url: QueryString.doc_loc,
+    	success: function (file_html) {
+    	    $("#document-text").html(file_html);
+    	}
+	});
+} else {
+	$("#docname").css("font-style", "italic");
+	$("#docname").text("Start Page");
+	$.ajax({
+    	type: 'GET',
+    	url: '/startpage',
+    	success: function (file_html) {
+    	    $("#document-text").html(file_html);
+    	}
+	});
+}

@@ -1,0 +1,6 @@
+<h1 style="text-align: center;">Welcome to Rich Text Editor</h1>
+<ul>
+	<li>
+		<a contentEditable="false" href="?doc_loc=/newdoc&doc_name=New%20Document">New Document</a>
+	</li>
+</ul>
