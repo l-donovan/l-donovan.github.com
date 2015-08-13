@@ -4,5 +4,8 @@
 		<li>
 			<a href="?doc_loc=/newdoc&doc_name=New%20Document">New Document</a>
 		</li>
+		<li>
+			<a href="?doc_loc=/testdoc&doc_name=Test%20Document">Test Document</a>
+		</li>
 	</ul>
 </div>
