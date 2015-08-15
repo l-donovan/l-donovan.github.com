@@ -41,17 +41,17 @@ if (typeof QueryString.doc_loc !== 'undefined') {
 }
 
 $("#bold")[0].onmousedown = function(e) {
-	e=e||window.event;
+	e = e || window.event;
 	e.preventDefault();
 };
 
 $("#italic")[0].onmousedown = function(e) {
-	e=e||window.event;
+	e = e || window.event;
 	e.preventDefault();
 };
 
 $("#underline")[0].onmousedown = function(e) {
-	e=e||window.event;
+	e = e || window.event;
 	e.preventDefault();
 };
 
@@ -98,11 +98,11 @@ function selectionIsUnderlined() {
 }
 
 function getSelectedText() {
-    if (window.getSelection)
-        return window.getSelection().toString();
-    else if (document.selection)
-        return document.selection.createRange().text;
-    return '';
+	if (window.getSelection)
+		return window.getSelection().toString();
+	else if (document.selection)
+		return document.selection.createRange().text;
+	return '';
 }
 
 function testBIU() {

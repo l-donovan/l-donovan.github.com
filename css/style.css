@@ -1,8 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
-  background-color: #CCCCCC;
-  font-size: 12px;
+	background-color: #CCCCCC;
+	font-size: 12px;
 }
 
 h1#docname {
@@ -19,64 +19,64 @@ h1#docname {
 }
 
 @-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0.2;
-    z-index: 0;
-  }
-  100% {
-    opacity: 1;
-    z-index: 3;
-  }
+	0% {
+		opacity: 0.2;
+		z-index: 0;
+	}
+	100% {
+		opacity: 1;
+		z-index: 3;
+	}
 }
 
 @-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1;
-    z-index: 3;
-  }
-  100% {
-    opacity: 0.2;
-    z-index: 0;
-  }
+	0% {
+		opacity: 1;
+		z-index: 3;
+	}
+	100% {
+		opacity: 0.2;
+		z-index: 0;
+	}
 }
 
 header {
-  -webkit-animation: fadeOut 0.5s 1;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation: fadeOut 0.5s 1;
-  -moz-animation-fill-mode: forwards;
-  position: fixed;
-  width: 100%;
-  height: 10%;
-  top: 0;
-  left: 0;
-  background-color: #888888;
-  z-index: 3;
-  opacity: 0.2;
+	-webkit-animation: fadeOut 0.5s 1;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation: fadeOut 0.5s 1;
+	-moz-animation-fill-mode: forwards;
+	position: fixed;
+	width: 100%;
+	height: 10%;
+	top: 0;
+	left: 0;
+	background-color: #888888;
+	z-index: 3;
+	opacity: 0.2;
 }
 
 header:hover {
-  -webkit-animation: fadeIn 0.5s 1;
-  -moz-animation: fadeIn 0.5s 1;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
+	-webkit-animation: fadeIn 0.5s 1;
+	-moz-animation: fadeIn 0.5s 1;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
 }
 
 #document-text {
-  position: absolute;
-  width: calc(100% - 740px);
-  height: 100%;
-  top: calc(10% + 15px);
-  left: 0;
-  margin: 0 20%;
-  background-color: #FFFFFF;
-  z-index: 1;
-  resize: none;
-  outline: none;
-  padding: 1in;
-  overflow: hidden;
-  font-family: 'Times New Roman';
-  font-size: 12pt;
+	position: absolute;
+	width: calc(100% - 740px);
+	height: 100%;
+	top: calc(10% + 15px);
+	left: 0;
+	margin: 0 20%;
+	background-color: #FFFFFF;
+	z-index: 1;
+	resize: none;
+	outline: none;
+	padding: 1in;
+	overflow: hidden;
+	font-family: 'Times New Roman';
+	font-size: 12pt;
 }
 
 #document-text:focus {
