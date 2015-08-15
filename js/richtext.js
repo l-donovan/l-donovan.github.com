@@ -33,7 +33,7 @@ if (typeof QueryString.doc_loc !== 'undefined') {
 	$("#docname").text("Start Page");
 	$.ajax({
 		type: 'GET',
-		url: '/startpage',
+		url: 'startpage',
 		success: function (file_html) {
 			$("#document-text").html(file_html);
 		}
