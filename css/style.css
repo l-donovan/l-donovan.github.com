@@ -5,16 +5,17 @@ body {
   font-size: 12px;
 }
 
-h1 {
-  margin: 0;
-  padding: 0.75em;
-  background-color: #FFFFFF;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.5em;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #000000;
-  font-weight: lighter;
+h1#docname {
+	display:inline-block; 
+	margin: 0;
+	padding: 0.75em;
+	background-color: #FFFFFF;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.5em;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: lighter;
 }
 
 @-webkit-keyframes fadeIn {
@@ -71,10 +72,37 @@ header:hover {
   background-color: #FFFFFF;
   z-index: 1;
   resize: none;
-  outline: none !important;
+  outline: none;
   padding: 1in;
   overflow: hidden;
   font-family: 'Times New Roman';
   font-size: 12pt;
-  box-shadow: 2px 2px 6px black;
+  box-shadow: 1px 1px 6px black;
+}
+
+.button-group {
+	font-family: 'Open Sans';
+	background: #FFFFFF;
+	padding: 7px;
+}
+
+.button {
+	display: inline-block;
+	text-align: center;
+	background: #ccc;
+	cursor: pointer;
+	border-top: solid 2px #eaeaea;
+	border-left: solid 2px #eaeaea;
+	border-bottom: solid 2px #777;
+	border-right: solid 2px #777;
+	padding: 5px 5px;    
+	width: 15px;
+}
+
+.down {
+    background: #bbb;
+    border-top: solid 2px #777;
+    border-left: solid 2px #777;
+    border-bottom:solid 2px  #eaeaea;
+    border-right: solid 2px #eaeaea;
 }
