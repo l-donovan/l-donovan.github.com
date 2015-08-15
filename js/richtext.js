@@ -4,14 +4,13 @@ var QueryString = function () {
 	var vars = query.split("&");
 	for (var i = 0; i < vars.length; i++) {
 		var pair = vars[i].split("=");
-		if (typeof query_string[pair[0]] === "undefined") {
+		if (typeof query_string[pair[0]] === "undefined")
 			query_string[pair[0]] = decodeURIComponent(pair[1]);
-		} else if (typeof query_string[pair[0]] === "string") {
+		else if (typeof query_string[pair[0]] === "string") {
 			var arr = [query_string[pair[0]], decodeURIComponent(pair[1])];
 			query_string[pair[0]] = arr;
-		} else {
+		} else
 			query_string[pair[0]].push(decodeURIComponent(pair[1]));
-		}
 	}
 	return query_string;
 }();
@@ -41,9 +40,20 @@ if (typeof QueryString.doc_loc !== 'undefined') {
 	});
 }
 
-var b_=$("#bold")[0];b_.onmousedown=function(e){e=e||window.event;e.preventDefault();};
-var i_=$("#italic")[0];i_.onmousedown=function(e){e=e||window.event;e.preventDefault();};
-var u_=$("#underline")[0];u_.onmousedown=function(e){e=e||window.event;e.preventDefault();};
+$("#bold")[0].onmousedown = function(e) {
+	e=e||window.event;
+	e.preventDefault();
+};
+
+$("#italic")[0].onmousedown = function(e) {
+	e=e||window.event;
+	e.preventDefault();
+};
+
+$("#underline")[0].onmousedown = function(e) {
+	e=e||window.event;
+	e.preventDefault();
+};
 
 function promptDocName() {
 	var name = prompt("Document Name:", $("#docname").text());
@@ -51,19 +61,22 @@ function promptDocName() {
 		$("#docname").text(name);
 }
 
-function bold(elem) {
+function bold() {
 	document.execCommand('bold');
-	$('#bold').toggleClass('down');
+	$('#bold').toggleClass('pressed');
+	testBIU();
 }
 
-function italic(elem) {
+function italic() {
 	document.execCommand('italic');
-	$('#italic').toggleClass('down');
+	$('#italic').toggleClass('pressed');
+	testBIU();
 }
 
-function underline(elem) {
+function underline() {
 	document.execCommand('underline');
-	$('#underline').toggleClass('down');
+	$('#underline').toggleClass('pressed');
+	testBIU();
 }
 
 function selectionIsBold() {
@@ -83,3 +96,35 @@ function selectionIsUnderlined() {
 		return document.queryCommandState('underline');
 	return false;
 }
+
+function getSelectedText() {
+    if (window.getSelection)
+        return window.getSelection().toString();
+    else if (document.selection)
+        return document.selection.createRange().text;
+    return '';
+}
+
+function testBIU() {
+	if (getSelectedText() !== '') {
+		if (selectionIsBold()) {		 
+			if (!$("#bold").hasClass("pressed"))
+				$("#bold").addClass("pressed");
+		} else
+			$("#bold").removeClass("pressed");
+		if (selectionIsItalic()) {		 
+			if (!$("#italic").hasClass("pressed"))
+				$("#italic").addClass("pressed");
+		} else
+			$("#italic").removeClass("pressed");
+		if (selectionIsUnderlined()) {		 
+			if (!$("#underline").hasClass("pressed"))
+				$("#underline").addClass("pressed");
+		} else
+			$("#underline").removeClass("pressed");
+	}
+}
+
+$('#document-text').mousemove(function() {
+	testBIU();
+});

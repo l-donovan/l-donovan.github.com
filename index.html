@@ -9,11 +9,6 @@
    <body>
       <header>
 			<div style="background-color: #FFFFFF"><h1 id="docname" onclick="promptDocName()"></h1></div>
-			<div class="button-group">
-    			<span class="button" id="bold" onclick="bold(this)">B</span>
-    			<span class="button" id="italic" onclick="italic(this)">I</span>
-    			<span class="button" id="underline" onclick="underline(this)">U</span>
-    		</div>
          <div id='cssmenu'>
             <ul>
                <li class='active has-sub'>
@@ -79,6 +74,11 @@
                </li>
             </ul>
          </div>
+			<div class="button-group">
+    			<span class="button-left" id="bold" onclick="bold()">B</span><!--
+			--><span class="button-center" id="italic" onclick="italic()">I</span><!--
+    		--><span class="button-right" id="underline" onclick="underline()">U</span>
+    		</div>
       </header>
       <section contenteditable="true" id="document-text"></section>
 		<script src='/js/richtext.js'></script>
