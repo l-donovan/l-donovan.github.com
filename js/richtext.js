@@ -106,25 +106,23 @@ function getSelectedText() {
 }
 
 function testBIU() {
-	if (getSelectedText() !== '') {
-		if (selectionIsBold()) {		 
-			if (!$("#bold").hasClass("pressed"))
-				$("#bold").addClass("pressed");
-		} else
-			$("#bold").removeClass("pressed");
-		if (selectionIsItalic()) {		 
-			if (!$("#italic").hasClass("pressed"))
-				$("#italic").addClass("pressed");
-		} else
-			$("#italic").removeClass("pressed");
-		if (selectionIsUnderlined()) {		 
-			if (!$("#underline").hasClass("pressed"))
-				$("#underline").addClass("pressed");
-		} else
-			$("#underline").removeClass("pressed");
-	}
+	if (selectionIsBold()) {		 
+		if (!$("#bold").hasClass("pressed"))
+			$("#bold").addClass("pressed");
+	} else
+		$("#bold").removeClass("pressed");
+	if (selectionIsItalic()) {		 
+		if (!$("#italic").hasClass("pressed"))
+			$("#italic").addClass("pressed");
+	} else
+		$("#italic").removeClass("pressed");
+	if (selectionIsUnderlined()) {		 
+		if (!$("#underline").hasClass("pressed"))
+			$("#underline").addClass("pressed");
+	} else
+		$("#underline").removeClass("pressed");
 }
 
-$('#document-text').mousemove(function() {
+var mainLoop = setInterval(function() {
 	testBIU();
-});
+}, 50);
