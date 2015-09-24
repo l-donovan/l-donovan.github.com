@@ -64,11 +64,11 @@ header:hover {
 
 #document-text {
 	position: absolute;
-	width: calc(100% - 740px);
-	height: 100%;
+	width: 60vw;
+	height: calc(60vw * 8.5 / 11);
 	top: calc(10% + 15px);
 	left: 0;
-	margin: 0 20%;
+	margin: 0 20vw;
 	background-color: #FFFFFF;
 	z-index: 1;
 	resize: none;
