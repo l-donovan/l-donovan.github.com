@@ -64,8 +64,8 @@ header:hover {
 
 #document-text {
 	position: absolute;
-	width: 60vw;
-	height: calc(60vw * 8.5 / 11);
+	width: calc(60vw - 2in);
+	height: calc((60vw - 2in) / 8.5 * 11);
 	top: calc(10% + 15px);
 	left: 0;
 	margin: 0 20vw;
